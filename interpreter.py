@@ -145,10 +145,10 @@ class Parser:
     def factor(self):
         """ Parser factor"""
         token =  self.current_token
-        if token.type =   TokenType.INTEGER:
+        if token.type ==   TokenType.INTEGER:
             self.eat(TokenType.INTEGER)
             return Num(token)
-        elif token.type =   TokenType.LPAREN:
+        elif token.type ==   TokenType.LPAREN:
             self.eat(TokenType.LPAREN)
             node = self.expr()
             self.eat (TokenType.RPAREN)
